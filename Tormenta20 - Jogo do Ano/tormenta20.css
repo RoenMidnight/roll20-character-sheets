@@ -220,14 +220,11 @@
 .sheet-main .sheet-header-info {
     display: grid;
     width: 100%;
-    height: 155px;
-    grid-template-columns: 140px 140px auto;
-    column-gap: 10px;
-    grid-template-rows: 1fr 1fr
+    grid-template-columns: 33% 33% 34%;
 }
 
 .sheet-main .sheet-character-attributes {
-    margin-top: -20px;
+    margin-top: 9px;
     width: 100%;
     height: 90px;
     margin-bottom: 10px;
@@ -1004,12 +1001,10 @@
     flex-direction: column
 }
 
-.sheet-main .sheet-right-container .sheet-logo-level {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 120px;
+.sheet-main .sheet-logo-level {
+    display: grid;
+    grid-template-columns: 4% 22% 20% 27% 8% 19%;
+    margin-top: 15px;
     row-gap: 10px
 }
 
@@ -1407,7 +1402,7 @@
     width: 100%;
     height: 24px;
     border: 0;
-    border-bottom: solid 2px black;
+    /* border-bottom: solid 2px black; */
     line-height: 24px;
     padding-left: 2px;
     padding-right: 2px
@@ -1415,7 +1410,7 @@
 
 .sheet-main .sheet-input-with-text-bellow span {
     display: block;
-    padding-top: 2px;
+    padding-top: 13px;
     padding-left: 2px;
     width: 100%;
     font-size: 12px;
@@ -1425,7 +1420,6 @@
 
 .sheet-main .sheet-input-with-text-bellow.sheet-char-name {
     padding-top: 15px;
-    grid-column: 1/3
 }
 
 .sheet-main .sheet-input-with-text-bellow.sheet-char-player {
@@ -2604,12 +2598,6 @@
     font-size: 13px
 }
 
-.sheet-deityAndLevel{
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-gap: 20px;
-}
-
 .sheet-dado{
     margin: auto !important;
 }
@@ -2820,3 +2808,101 @@
     vertical-align: baseline !important;
   }
 
+.sheet-image-attributes {
+    background-image: url("https://raw.githubusercontent.com/RoenMidnight/roll20-character-sheets/58b86da60b43cbb7d101e369d32bebe2ab584212/Tormenta20%20-%20Jogo%20do%20Ano/assets/atributos.svg");
+    background-size: 70px 100%;
+    background-repeat: no-repeat;
+    border: 0px;
+    background-position: 0px -11px;
+}
+
+.sheet-charnotes-header {
+    width: 100;
+    display: block;
+    grid-column: 1/3;
+    height: 200px;
+}
+
+.sheet-image-attributes div { border: 0px !important; }
+
+.sheet-set-input-size {
+    width: 90% !important;
+    margin-left: 5% !important;
+}
+
+.sheet-set-input-race {
+    margin-top: 3px;
+    margin-left: 6% !important;
+}
+
+.sheet-set-input-background {
+    margin-top: 3px;
+    margin-left: 11% !important;
+    width: 86% !important;
+}
+
+.sheet-image-character-name {
+    background-image: url("https://raw.githubusercontent.com/RoenMidnight/roll20-character-sheets/58b86da60b43cbb7d101e369d32bebe2ab584212/Tormenta20%20-%20Jogo%20do%20Ano/assets/npersonagem.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.sheet-image-player {
+    background-image: url("https://raw.githubusercontent.com/RoenMidnight/roll20-character-sheets/58b86da60b43cbb7d101e369d32bebe2ab584212/Tormenta20%20-%20Jogo%20do%20Ano/assets/jogador.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.sheet-player-span {
+    padding-top: 0px !important;
+    margin-top: -15px;
+    padding-bottom: 7px;
+}
+
+.sheet-race-input {
+    margin-left: 8% !important;
+}
+
+.sheet-deity-input {
+    width: 85% !important;
+}
+
+.sheet-input-bellow {
+    margin-top: 9px !important;
+}
+
+.sheet-input-level {
+    width: 30px !important;
+    text-align: center;
+    margin-left: 18px !important;
+}
+
+.sheet-image-race {
+    background-image: url("https://raw.githubusercontent.com/RoenMidnight/roll20-character-sheets/58b86da60b43cbb7d101e369d32bebe2ab584212/Tormenta20%20-%20Jogo%20do%20Ano/assets/raca.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.sheet-image-background {
+    background-image: url("https://raw.githubusercontent.com/RoenMidnight/roll20-character-sheets/58b86da60b43cbb7d101e369d32bebe2ab584212/Tormenta20%20-%20Jogo%20do%20Ano/assets/origem.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.sheet-image-class {
+    background-image: url("https://raw.githubusercontent.com/RoenMidnight/roll20-character-sheets/58b86da60b43cbb7d101e369d32bebe2ab584212/Tormenta20%20-%20Jogo%20do%20Ano/assets/classe.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.sheet-image-level {
+    background-image: url("https://raw.githubusercontent.com/RoenMidnight/roll20-character-sheets/58b86da60b43cbb7d101e369d32bebe2ab584212/Tormenta20%20-%20Jogo%20do%20Ano/assets/nivel.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.sheet-image-deity {
+    background-image: url("https://raw.githubusercontent.com/RoenMidnight/roll20-character-sheets/58b86da60b43cbb7d101e369d32bebe2ab584212/Tormenta20%20-%20Jogo%20do%20Ano/assets/divindade.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}

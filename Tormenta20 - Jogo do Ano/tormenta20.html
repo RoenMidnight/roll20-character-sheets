@@ -1,111 +1,100 @@
 <div class="main">
-    <div class="left-container">
+    <div class="sheet-charnotes-header">
         <div class="header-info">
-            <div class="input-with-text-bellow char-name">
-                <input name="attr_character_name" type="text"  spellcheck="false"  value="">
-                <span data-i18n="nome">Nome do Personagem</span>
+            <div class="input-with-text-bellow char-name sheet-image-character-name">
+                <input name="attr_character_name" type="text"  spellcheck="false"  value="" class="sheet-set-input-size"> 
+                <span data-i18n="nome">Nome do Personagem</span>               
             </div>
-            <div class="input-with-text-bellow char-player">
-                <input name="attr_playername" type="text" spellcheck="false" value=""/>
-                <span data-i18n="jogador">Jogador</span>
+            <div class="input-with-text-bellow char-player sheet-image-player">
+                <span data-i18n="jogador" class="sheet-player-span">Jogador</span>
+                <input name="attr_playername" type="text" spellcheck="false" value="" class="sheet-set-input-size"/>                
             </div>
-            <div class="input-with-text-bellow">
-                <input name="attr_trace" type="text" spellcheck="false" value=""/>
+            <div class="container-logo">
+                <img src="https://raw.githubusercontent.com/RoenMidnight/roll20-character-sheets/master/Tormenta20%20-%20Jogo%20do%20Ano/Tormenta20Logo.png" class="logo-tormenta"/>
+            </div>            
+        </div>
+        <div class="logo-level">
+            <div>
+                
+            </div>            
+            <div class="input-with-text-bellow sheet-image-race ">
+                <input name="attr_trace" type="text" spellcheck="false" value="" class="sheet-set-input-size sheet-input-bellow sheet-race-input"/>
                 <span data-i18n="raca">Raça</span>
             </div>
-            <div class="input-with-text-bellow">
-                <input name="attr_torigin" type="text" spellcheck="false" value=""/>
+            <div class="input-with-text-bellow sheet-image-background">
+                <input name="attr_torigin" type="text" spellcheck="false" value="" class="sheet-set-input-size sheet-input-bellow"/>
                 <span data-i18n="origem">Origem</span>
             </div>
-            <div class="input-with-text-bellow">
-                <input name="attr_tlevel" type="text" spellcheck="false" value=""/>
+            <div class="input-with-text-bellow sheet-image-class">
+                <input name="attr_tlevel" type="text" spellcheck="false" value="" class="sheet-set-input-size sheet-input-bellow"/>
                 <span data-i18n="classe_nivel">Classe & Nível</span>
             </div>
+            <div class="input-with-text-bellow">
+                <div class="total-level sheet-image-level">                    
+                    <input name="attr_charnivel" maxlength="3" type="text" spellcheck="false" value="1" class="sheet-set-input-size sheet-input-bellow sheet-input-level"/>
+                    <span data-i18n="nivel_personagem">Nível do Personagem</span>                    
+                </div>
+            </div>
+            <div class="input-with-text-bellow sheet-image-deity">
+                <input name="attr_divindade" type="text" spellcheck="false" value="" class="sheet-set-input-size sheet-input-bellow sheet-deity-input"/>
+                <span data-i18n="divindade">Divindade</span>
+            </div> 
         </div>
-
+    </div>
+    <div class="left-container">
         <div class="character-attributes">
             <!-- Força -->
-            <div class="outer-container-negative-corner">
+            <div class="outer-container-negative-corner sheet-image-attributes">
                 <div class="container-negative-corner">
                     <div class="inside-negative-corner">
                         <!-- Conteudo aqui -->
                         <button tabindex="-1" type="roll" name="roll_for" value="&{template:t20}{{character=@{character_name}}}{{rollname=Força}}{{theroll=[[1d20+@{for_mod}]]}}" class="button-title-attribute" data-i18n="mod_forca">FOR</button>
-                        <input name="attr_for" type="text" spellcheck="false" maxlength="2" class="fake-mod" title="@{for_mod}" />
-                          
-                        <div class="corner top-left"></div>
-                        <div class="corner top-right"></div>
-                        <div class="corner bottom-left"></div>
-                        <div class="corner bottom-right"></div>
+                        <input name="attr_for" type="text" spellcheck="false" maxlength="2" class="fake-mod" title="@{for_mod}" />       
                     </div>
                 </div>
             </div>
             <!-- Destreza -->
-            <div class="outer-container-negative-corner">
+            <div class="outer-container-negative-corner sheet-image-attributes">
                 <div class="container-negative-corner">
                     <div class="inside-negative-corner">
                         <button tabindex="-1" type="roll" name="roll_des" value="&{template:t20}{{character=@{character_name}}}{{rollname=Destreza}}{{theroll=[[1d20+@{des_mod}]]}}" class="button-title-attribute" data-i18n="mod_destreza">DES</button>
                         <input name="attr_des" type="text" spellcheck="false" maxlength="2" class="fake-mod" title="@{des_mod}" />
-                            
-                        <div class="corner top-left"></div>
-                        <div class="corner top-right"></div>
-                        <div class="corner bottom-left"></div>
-                        <div class="corner bottom-right"></div>
                     </div>
                 </div>
             </div>
             <!-- Constituição -->
-            <div class="outer-container-negative-corner">
+            <div class="outer-container-negative-corner  sheet-image-attributes">
                 <div class="container-negative-corner">
                     <div class="inside-negative-corner">
                         <button tabindex="-1" type="roll" name="roll_con" value="&{template:t20}{{character=@{character_name}}}{{rollname=Constituição}}{{theroll=[[1d20+@{con_mod}]]}}" class="button-title-attribute" data-i18n="mod_constituicao">CON</button>
                         <input name="attr_con" type="text" spellcheck="false" maxlength="2" class="fake-mod" title="@{con_mod}" />
-                            
-                        <div class="corner top-left"></div>
-                        <div class="corner top-right"></div>
-                        <div class="corner bottom-left"></div>
-                        <div class="corner bottom-right"></div>
                     </div>
                 </div>
             </div>
             <!-- Inteligência -->
-            <div class="outer-container-negative-corner">
+            <div class="outer-container-negative-corner  sheet-image-attributes">
                 <div class="container-negative-corner">
                     <div class="inside-negative-corner">
                         <button tabindex="-1" type="roll" name="roll_int" value="&{template:t20}{{character=@{character_name}}}{{rollname=Inteligência}}{{theroll=[[1d20+@{int_mod}]]}}" class="button-title-attribute" data-i18n="mod_inteligencia">INT</button>
                         <input name="attr_int" type="text" spellcheck="false" maxlength="2" class="fake-mod" title="@{int_mod}" />
-                            
-                        <div class="corner top-left"></div>
-                        <div class="corner top-right"></div>
-                        <div class="corner bottom-left"></div>
-                        <div class="corner bottom-right"></div>
                     </div>
                 </div>
             </div>
             <!-- Sabedoria -->
-            <div class="outer-container-negative-corner">
+            <div class="outer-container-negative-corner sheet-image-attributes">
                 <div class="container-negative-corner">
                     <div class="inside-negative-corner">
                         <button tabindex="-1" type="roll" name="roll_sab" value="&{template:t20}{{character=@{character_name}}}{{rollname=Sabedoria}}{{theroll=[[1d20+@{sab_mod}]]}}" class="button-title-attribute" data-i18n="mod_sabedoria">SAB</button>
                         <input name="attr_sab" type="text" spellcheck="false" maxlength="2" class="fake-mod" title="@{sab_mod}" />
-                            
-                        <div class="corner top-left"></div>
-                        <div class="corner top-right"></div>
-                        <div class="corner bottom-left"></div>
-                        <div class="corner bottom-right"></div>
                     </div>
                 </div>
             </div>
             <!-- Carisma -->
-            <div class="outer-container-negative-corner">
+            <div class="outer-container-negative-corner sheet-image-attributes">
                 <div class="container-negative-corner">
                     <div class="inside-negative-corner">
                         <button tabindex="-1" type="roll" name="roll_car" value="&{template:t20}{{character=@{character_name}}}{{rollname=Carisma}}{{theroll=[[1d20+@{car_mod}]]}}" class="button-title-attribute" data-i18n="mod_carisma">CAR</button>
                         <input name="attr_car" type="text" spellcheck="false" maxlength="2" class="fake-mod" title="@{car_mod}" />
-                            
-                        <div class="corner top-left"></div>
-                        <div class="corner top-right"></div>
-                        <div class="corner bottom-left"></div>
-                        <div class="corner bottom-right"></div>
                     </div>
                 </div>
             </div>
@@ -256,10 +245,7 @@
                             <!-- Ataques -->
 
 
-                        <div class="corner top-left"></div>
-                        <div class="corner top-right"></div>
-                        <div class="corner bottom-left"></div>
-                        <div class="corner bottom-right"></div>
+                        
                     </div>
                 </div>
             </div>
@@ -315,10 +301,7 @@
 
 
 
-                        <div class="corner top-left"></div>
-                        <div class="corner top-right"></div>
-                        <div class="corner bottom-left"></div>
-                        <div class="corner bottom-right"></div>
+                        
                     </div>
                 </div>
                 <div class="container-negative-corner container-armor-shield">
@@ -344,10 +327,7 @@
                         <div>
                             <input name="attr_armadurapenalidade2" type="text" spellcheck="false" value="0">
                         </div>
-                        <div class="corner top-left"></div>
-                        <div class="corner top-right"></div>
-                        <div class="corner bottom-left"></div>
-                        <div class="corner bottom-right"></div>
+                        
                     </div>
                 </div>
             </div>
@@ -360,10 +340,7 @@
                         <div class="content-centered">
                             <textarea name="attr_proficiencias"></textarea>
                         </div>
-                        <div class="corner top-left"></div>
-                        <div class="corner top-right"></div>
-                        <div class="corner bottom-left"></div>
-                        <div class="corner bottom-right"></div>
+                        
                     </div>
                 </div>
             </div>
@@ -609,24 +586,7 @@
         
     </div> 
     
-    <div class="right-container">
-        <div class="logo-level">
-            <div class="container-logo">
-                <img src="https://raw.githubusercontent.com/RoenMidnight/roll20-character-sheets/master/Tormenta20%20-%20Jogo%20do%20Ano/Tormenta20Logo.png" class="logo-tormenta"/>
-            </div>
-            <div class="deityAndLevel">
-                <div class="input-with-text-bellow">
-                    <div class="total-level">                    
-                        <input name="attr_charnivel" maxlength="3" type="text" spellcheck="false" value="1"/>
-                        <span data-i18n="nivel_personagem">Nível do Personagem</span>                    
-                    </div>
-                </div>
-                <div class="input-with-text-bellow">
-                    <input name="attr_divindade" type="text" spellcheck="false" value=""/>
-                    <span data-i18n="divindade">Divindade</span>
-                </div>                
-            </div>
-        </div>
+    <div class="right-container">        
         <div class="skills-container">
             <div class="container-negative-corner">
                 <div class="inside-negative-corner">
