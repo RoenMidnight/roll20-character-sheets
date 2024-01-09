@@ -1,0 +1,767 @@
+<link rel="stylesheet" href="skyfall.css">
+<div class="sheet-main">
+    <div class="sheet-header-global">
+        <div class="sheet-header-left">
+            <span class="sheet-header-name">NOME DA PERSONAGEM</span>
+            <input class="sheet-header-name-input" name="attr_character_name" type="text" spellcheck="false" placeholder=""  value="">
+            <span class="sheet-header-pronoums">PRONOMES
+                <input class="sheet-header-pronoums-input" name="attr_character_pronoum" type="text" spellcheck="false" placeholder=""  value="">
+            </span>
+        </div>
+        <div class="sheet-header-middle">
+            <div class="sheet-header-line-inputs">
+                <input class="sheet-header-middle-input" name="attr_character_class" type="text" spellcheck="false" placeholder=""  value="">
+                <input class="sheet-header-middle-input" name="attr_character_legacy" type="text" spellcheck="false" placeholder=""  value="">
+                <input class="sheet-header-middle-last-input" name="attr_character_heritage" type="text" spellcheck="false" placeholder=""  value="">
+            </div>
+            <div class="sheet-header-line-label">
+                <span>NÍVEL/CLASSE</span>
+                <span>LEGADO</span>
+                <span class="sheet-header-line-last-label">HERANÇA</span>
+            </div>
+            <div class="sheet-header-line-inputs">
+                <input class="sheet-header-middle-input" name="attr_character_antecedent" type="text" spellcheck="false" placeholder=""  value="">
+                <input class="sheet-header-middle-input" name="attr_character_curse" type="text" spellcheck="false" placeholder=""  value="">
+                <input class="sheet-header-middle-last-input" name="attr_character_player" type="text" spellcheck="false" placeholder=""  value="">
+            </div>
+            <div class="sheet-header-line-label">
+                <span>ANTECEDENTE</span>
+                <span>MALDIÇÃO</span>
+                <span class="sheet-header-line-last-label">JOGADORE</span>
+            </div>
+            <div class="sheet-header-line-inputs">
+                <input class="sheet-header-middle-input" name="attr_character_trilha" type="text" spellcheck="false" placeholder=""  value="">
+            </div>
+            <div class="sheet-header-line-label">
+                <span>TRILHA</span>
+            </div>            
+        </div>
+        <div class="sheet-header-right">
+            <div>
+                <div>
+                    <div>
+                        <span>PONTOS DE CATARSE</span>
+                    </div>
+                    <div>
+                        <input class="sheet-header-right-input" name="attr_character_catarse" type="text" spellcheck="false" placeholder=""  value="">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <span>PONTOS DE ENFASE</span>
+                    </div>
+                    <div class="sheet-header-right-stats">
+                        <div>
+                            <input class="sheet-header-right-input" name="attr_character_enfase_atual" type="text" spellcheck="false" placeholder=""  value="">
+                            <br>
+                            <span>ATUAIS</span>
+                        </div>
+                        <div>
+                            <input class="sheet-header-right-input" name="attr_character_enfase_final" type="text" spellcheck="false" placeholder=""  value="">
+                            <br>
+                            <span>TOTAIS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sheet-navigation-tabs">
+        <label class="sheet-switch sheet-character-attributes-tab">
+            <input id="cstype" class="sheet-hiddenelement" type="radio" name="attr_cstype" value="0" checked>
+            <span class="slider round">Atributos</span>
+        </label>
+        <label class="sheet-switch sheet-character-equipment-tab">
+            <input id="cstype" class="sheet-hiddenelement" type="radio" name="attr_cstype" value="3">
+            <span class="slider round">Equipamento</span>
+        </label>
+        <label class="sheet-switch sheet-character-actions-tab">
+            <input id="cstype" class="sheet-hiddenelement" type="radio" name="attr_cstype" value="1">
+            <span class="slider round">Ações</span>
+        </label>
+        <label class="sheet-switch sheet-character-spells-tab">
+            <input id="cstype" class="sheet-hiddenelement" type="radio" name="attr_cstype" value="2">
+            <span class="slider round">Magias</span>
+        </label>
+    </div>
+    <div class="sheet-character-attributes">
+        <div class="sheet-main-column">
+            <div class="sheet-attributes">
+                <div class="sheet-attribute-name">
+                    <span>FOR</span><span>DES</span><span>CON</span><span>INT</span><span>SAB</span><span class="sheet-attribute-name-last">CAR</span>
+                </div>
+                <div class="sheet-attribute-value">
+                    <input class="sheet-attribute-input" name="attr_character_strength" type="text" spellcheck="false" placeholder=""  value="" type="number">
+                    <input class="sheet-attribute-input" name="attr_character_dexterity" type="text" spellcheck="false" placeholder=""  value="" type="number">
+                    <input class="sheet-attribute-input" name="attr_character_constitution" type="text" spellcheck="false" placeholder=""  value="" type="number">
+                    <input class="sheet-attribute-input" name="attr_character_intelligence" type="text" spellcheck="false" placeholder=""  value="" type="number">
+                    <input class="sheet-attribute-input" name="attr_character_wisdom" type="text" spellcheck="false" placeholder=""  value="" type="number">
+                    <input class="sheet-attribute-input sheet-attribute-last-input" name="attr_character_charisma" type="text" spellcheck="false" placeholder=""  value="" type="number">
+                </div>
+                <div class="sheet-attribute-save-checks">
+                    <input class="sheet-attribute-save-check" type="checkbox" id="attr_save_strenth_check" name="attr_save_strenth_check" value="str_check" />
+                    <input class="sheet-attribute-save-check" type="checkbox" id="attr_save_dexterity_check" name="attr_save_dexterity_check" value="str_check" />
+                    <input class="sheet-attribute-save-check" type="checkbox" id="attr_save_constitution_check" name="attr_save_constitution_check" value="str_check" />
+                    <input class="sheet-attribute-save-check" type="checkbox" id="attr_save_intelligence_check" name="attr_save_intelligence_check" value="str_check" />
+                    <input class="sheet-attribute-save-check" type="checkbox" id="attr_save_wisdom_check" name="attr_save_wisdom_check" value="str_check" />
+                    <input class="sheet-attribute-save-check sheet-attribute-save-last-check" type="checkbox" id="attr_save_charisma_check" name="attr_save_charisma_check" value="str_check" />
+                </div>
+                <div class="sheet-attribute-save-values">
+                    <input class="sheet-attribute-save-value" name="attr_save_strenth_value" type="text" spellcheck="false" placeholder=""  value="" type="number">
+                    <input class="sheet-attribute-save-value" name="attr_save_dexterity_value" type="text" spellcheck="false" placeholder=""  value="" type="number">
+                    <input class="sheet-attribute-save-value" name="attr_save_constitution_value" type="text" spellcheck="false" placeholder=""  value="" type="number">
+                    <input class="sheet-attribute-save-value" name="attr_save_intelligence_value" type="text" spellcheck="false" placeholder=""  value="" type="number">
+                    <input class="sheet-attribute-save-value" name="attr_save_wisdom_value" type="text" spellcheck="false" placeholder=""  value="" type="number">
+                    <input class="sheet-attribute-save-value sheet-attribute-save-last-value" name="attr_save_charisma_value" type="text" spellcheck="false" placeholder=""  value="" type="number">
+                </div>
+            </div>
+            <div class="sheet-main-column-left-collumn">
+                <div class="sheet-skills-and-languages">
+                    <div class="sheet-skills">
+                        <div>
+                            <input class="sheet-header-middle-input" name="attr_proficient_bonus" type="text" spellcheck="false" placeholder=""  value="">
+                            <span>BÔNUS DE PROFICIÊNCIA</span>
+                        </div>
+                        <div>
+                            <!--APRESENTAÇÃO-->   
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>APRESENTAÇÃO</span>
+                            </div>
+                            <!--APTIDÃO--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>APTIDÃO</span>
+                                <select>
+                                    <option>Forja</option>
+                                    <option>Veneno</option>
+                                    <option>Pescaria</option>
+                                    <option>Alquimia</option>
+                                    <option>Destilação</option>
+                                    <option>Cartografia</option>
+                                    <option>Alfaiataria</option>
+                                    <option>Culinária</option>
+                                    <option>Pintura</option>
+                                    <option>Artesanato</option>
+                                    <option>Navegação</option>
+                                    <option>Instrumentos Musicais</option>
+                                </select>
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>APTIDÃO</span>
+                                <select>
+                                    <option>Forja</option>
+                                    <option>Veneno</option>
+                                    <option>Pescaria</option>
+                                    <option>Alquimia</option>
+                                    <option>Destilação</option>
+                                    <option>Cartografia</option>
+                                    <option>Alfaiataria</option>
+                                    <option>Culinária</option>
+                                    <option>Pintura</option>
+                                    <option>Artesanato</option>
+                                    <option>Navegação</option>
+                                    <option>Instrumentos Musicais</option>
+                                </select>
+                            </div>
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>APTIDÃO</span>
+                                <select>
+                                    <option>Forja</option>
+                                    <option>Veneno</option>
+                                    <option>Pescaria</option>
+                                    <option>Alquimia</option>
+                                    <option>Destilação</option>
+                                    <option>Cartografia</option>
+                                    <option>Alfaiataria</option>
+                                    <option>Culinária</option>
+                                    <option>Pintura</option>
+                                    <option>Artesanato</option>
+                                    <option>Navegação</option>
+                                    <option>Instrumentos Musicais</option>
+                                </select>
+                            </div>
+                            <!--ARCANISMO--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>ARCANISMO</span>
+                            </div>
+                            <!--ARCANISMO--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>ARCANISMO</span>
+                            </div>
+                            <!--CULTURA--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>CULTURA</span>
+                            </div>
+                            <!--DOUTRINAS--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>DOUTRINAS</span>
+                            </div>
+                            <!--DIPLOMACIA--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>DIPLOMACIA</span>
+                            </div>
+                            <!--FURTIVIDADE--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>FURTIVIDADE</span>
+                            </div>
+                            <!--INTIMIDAÇÃO--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>INTIMIDAÇÃO</span>
+                            </div>
+                            <!--INTUIÇÃO--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>INTUIÇÃO</span>
+                            </div>
+                            <!--MEDICINA--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>MEDICINA</span>
+                            </div>
+                            <!--MAGITEC--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>MAGITEC</span>
+                            </div>
+                            <!--MALANDRAGEM--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>MALANDRAGEM</span>
+                            </div>
+                            <!--MANIPULAÇÃO--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>MANIPULAÇÃO</span>
+                            </div>
+                            <!--NATUREZA--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>NATUREZA</span>
+                            </div>
+                            <!--PERCEPÇÃO--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>PERCEPÇÃO</span>
+                            </div>
+                            <!--PREPARO FÍSICO--> 
+                            <div>
+                                <input type="checkbox">
+                                <input type="checkbox">
+                                <span>PREPARO FÍSICO</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sheet-language">
+                        <span>IDIOMAS E OUTRAS PROFICIÊNCIAS</span>
+                        <textarea></textarea>
+                    </div>
+                </div>            
+            </div>
+            <div class="sheet-main-column-right-collumn">
+                <div class="sheet-init-health">
+                    <div class="sheet-initiative">
+                        <div>
+                            <span>INICIATIVA</span>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <span>REDUÇÃO DE DANO</span>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <div>
+                                <span>DESLOCAMENTO</span>
+                                <input type="text">
+                            </div>
+                            <div>
+                                <span>TAMANHO</span>
+                                <input type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sheet-health-and-dices">
+                        <div>
+                            <div>
+                                <input type="text">
+                                <span>PONTOS DE VIDA TOTAIS</span>
+                            </div>
+                            <div>
+                                <input type="text">
+                                <span>PV TEMP.</span>
+                            </div>
+                            <div>
+                                <input type="text">
+                                <span>PONTOS DE VIDA ATUAIS</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <input type="text">
+                                <span>DADOS DE VIDA TOTAIS</span>
+                            </div>
+                            <div>
+                                <input type="text">
+                                <span>DADO DE VIDA</span>
+                            </div>
+                            <div>
+                                <input type="text">
+                                <span>DADOS DE VIDA ATUAIS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sheet-shadow-death">
+                    <div>
+                        <span>PONTOS DE SOMBRA</span>
+                        <input type="checkbox"><input type="checkbox"><input type="checkbox">
+                        <input type="checkbox"><input type="checkbox">
+                    </div>
+                    <div>
+                        <span>TESTES DE MORTE</span>
+                        <input type="checkbox">
+                        <input type="checkbox">
+                        <input type="checkbox">
+                    </div>
+                </div>
+                <div class="sheet-attacks">
+                    <div class="sheet-top">
+                        <div>
+                            <span>NAME</span>
+                        </div>
+                        <div>
+                            <span>ATK</span>
+                        </div>
+                        <div>
+                            <span>DANO</span>
+                        </div>
+                    </div>
+                    <!-- Ataques -->
+                    <fieldset class="repeating_attacks"> 
+                        <div class="sheet-attacksgrid">
+                            <input class="sheet-options-flag" type="checkbox" name="attr_options-flag" checked="checked"><span>y</span>
+                            <div class="sheet-options">
+                                <div class="sheet-row"><span>NOME:</span>
+                                <input type="text" name="attr_atkname">
+                                </div>
+                                <div class="sheet-row">
+                                <input type="checkbox" name="attr_atkflag" value="{{attack=1}}" checked="checked"><span>ATAQUE:</span>
+                                <select name="attr_atkattr_base">
+                                    <option value="@{strength_mod}" selected="selected">FOR</option>
+                                    <option value="@{dexterity_mod}">DES</option>
+                                    <option value="@{constitution_mod}">CON</option>
+                                    <option value="@{intelligence_mod}">INT</option>
+                                    <option value="@{wisdom_mod}">SAB</option>
+                                    <option value="@{charisma_mod}">CAR</option>
+                                    <option value="spell">MAGIA</option>
+                                    <option value="0">-</option>
+                                </select><span>+</span>
+                                <input class="num" type="text" name="attr_atkmod" placeholder="0"><span>+</span>
+                                <input type="checkbox" name="attr_atkprofflag" value="(@{pb})" checked="checked" style="margin-left: 3px;"><span>PROFICIENCIA</span>
+                                </div>
+                                <div class="sheet-row"><span style="margin-left: 17px;">DISTÂNCIA:</span>
+                                <input type="text" name="attr_atkrange" style="width: 170px;">
+                                </div>
+                                <div class="sheet-row"><span style="margin-left: 17px;">MAGIC BONUS:</span>
+                                <input class="num" type="text" name="attr_atkmagic" placeholder="0"><span >CRITICO:</span>
+                                <input class="num" type="text" name="attr_atkcritrange" value="20" placeholder="20">
+                                </div>
+                                <div class="sheet-row">
+                                <input type="checkbox" name="attr_dmgflag" value="{{damage=1}} {{dmg1flag=1}}" checked="checked"><span>DANO:</span>
+                                <input type="text" name="attr_dmgbase" placeholder="1d6" style="width: 50px;"><span>+</span>
+                                <select name="attr_dmgattr">
+                                    <option value="@{strength_mod}" selected="selected">FOR</option>
+                                    <option value="@{dexterity_mod}">DES</option>
+                                    <option value="@{constitution_mod}">CON</option>
+                                    <option value="@{intelligence_mod}">INT</option>
+                                    <option value="@{wisdom_mod}">SAB</option>
+                                    <option value="@{charisma_mod}">CAR</option>
+                                    <option value="spell">MAGIA</option>
+                                    <option value="0">-</option>
+                                </select><span>+</span>
+                                <input class="num" type="text" name="attr_dmgmod" placeholder="0">
+                                </div>
+                                <div class="sheet-row"><span style="margin-left: 17px;">TIPO:</span>
+                                <input type="text" name="attr_dmgtype" placeholder="Corte" style="width: 50px;"><span>CRIT:</span>
+                                <input type="text" name="attr_dmgcustcrit" placeholder="1d6" style="width: 80px;">
+                                </div>
+                                <div class="sheet-row">
+                                <input type="checkbox" name="attr_dmg2flag" value="{{damage=1}} {{dmg2flag=1}}"><span>DAMAGE2:</span>
+                                <input type="text" name="attr_dmg2base" placeholder="1d6" style="width: 50px;"><span>+</span>
+                                <select name="attr_dmg2attr">
+                                    <option value="@{strength_mod}" selected="selected">FOR</option>
+                                    <option value="@{dexterity_mod}">DES</option>
+                                    <option value="@{constitution_mod}">CON</option>
+                                    <option value="@{intelligence_mod}">INT</option>
+                                    <option value="@{wisdom_mod}">SAB</option>
+                                    <option value="@{charisma_mod}">CAR</option>
+                                    <option value="spell">MAGIA</option>
+                                    <option value="0">-</option>
+                                </select><span>+</span>
+                                <input class="num" type="text" name="attr_dmg2mod" placeholder="0">
+                                </div>
+                                <div class="sheet-row"><span style="margin-left: 17px;">TIPO:</span>
+                                <input type="text" name="attr_dmg2type" placeholder="Slashing" style="width: 50px;"><span>CRIT:</span>
+                                <input type="text" name="attr_dmg2custcrit" placeholder="1d6" style="width: 80px;">
+                                </div>
+                                <div class="sheet-row">
+                                <input type="checkbox" name="attr_saveflag" value="{{save=1}} {{saveattr=@{saveattr}}} {{savedesc=@{saveeffect}}} {{savedc=[[[[@{savedc}]][SAVE]]]}}"><span>SALVA GUARDA:</span>
+                                <select name="attr_saveattr">
+                                    <option value="Força" selected="selected">FOR</option>
+                                    <option value="Destreza">DES</option>
+                                    <option value="Constituição">CON</option>
+                                    <option value="Inteligência">INT</option>
+                                    <option value="Sabedoria">SAB</option>
+                                    <option value="Carisma">CAR</option>
+                                </select><span>VS DC:</span>
+                                <select name="attr_savedc">
+                                    <option value="(@{spell_save_dc})" selected="selected">MAGIA</option>
+                                    <option value="(@{strength_mod}+8+@{spell_dc_mod}+@{pb})">FOR</option>
+                                    <option value="(@{dexterity_mod}+8+@{spell_dc_mod}+@{pb})" >DES</option>
+                                    <option value="(@{constitution_mod}+8+@{spell_dc_mod}+@{pb})" >CON</option>
+                                    <option value="(@{intelligence_mod}+8+@{spell_dc_mod}+@{pb})" >INT</option>
+                                    <option value="(@{wisdom_mod}+8+@{spell_dc_mod}+@{pb})" >SAB</option>
+                                    <option value="(@{charisma_mod}+8+@{spell_dc_mod}+@{pb})" >CAR</option>
+                                    <option value="(@{saveflat})" >FLAT</option>
+                                </select>
+                                <input class="flatflag" type="hidden" name="attr_savedc">
+                                <input class="num flat" type="text" name="attr_saveflat" placeholder="10" value="10">
+                                </div>
+                                <div class="sheet-row"><span>SAVE EFFECT:</span>
+                                <input type="text" name="attr_saveeffect" placeholder="half damage" style="width: 160px;">
+                                </div>
+                                <div class="sheet-row ammo"><span>MUNIÇÃO:</span>
+                                <input type="text" name="attr_ammo" placeholder="Flechas" style="width: 160px;">
+                                </div>
+                                <div class="sheet-row"><span>DESCRIÇÃO:</span>
+                                <textarea name="attr_atk_desc" placeholder="Descrição"></textarea>
+                                </div>
+                            </div>
+                            <div class="sheet-display" style="display: grid; grid-template-columns: 1fr 90px; grid-template-columns: 1fr 78px; margin: 0 8px; gap: 5px;">
+                                <button type="roll" name="roll_attack" value="@{rollbase}" class="btn ui-draggable"><span name="attr_atkname" style="width: 85px; max-width: none;"></span>
+                                <input type="text" name="attr_atkbonus" style="width: 40px; text-align: center; max-width: none;" value="">
+                                </button>
+                                <button type="roll" name="roll_dmg" value="@{rollbase_dmg}" class="btn ui-draggable">
+                                <input type="text" name="attr_atkdmgtype" style="width: 100%; max-width: none;" value="">
+                                </button>
+                            </div>
+                            <input type="hidden" name="attr_rollbase">
+                            <input type="hidden" name="attr_rollbase_dmg">
+                            <input type="hidden" name="attr_rollbase_crit">
+                            <input type="hidden" name="attr_hldmg">
+                            <input type="hidden" name="attr_spelllevel">
+                            <input type="hidden" name="attr_itemid">
+                            <input type="hidden" name="attr_spellid">
+                            <input type="hidden" name="attr_spell_innate">
+                            <input type="hidden" name="attr_versatile_alt">
+                            <input type="hidden" name="attr_spelldesc_link">
+                            <button type="roll" name="roll_spelldesc_link" style="display: none;" value="@{spelldesc_link}" class="btn ui-draggable"></button>
+                            <button type="roll" name="roll_attack_dmg" style="display: none;" value="@{rollbase_dmg}" class="btn ui-draggable"></button>
+                            <button type="roll" name="roll_attack_crit" style="display: none;" value="@{rollbase_crit}" class="btn ui-draggable"></button>
+                        </div> 
+                        
+                        
+                    </fieldset>
+                    <!-- Ataques -->                    
+                </div>
+            </div> 
+        </div>
+        <div class="sheet-character-background">
+            <div class="sheet-textbox-div">
+                <span>LEGADO</span>
+                <input>
+                <textarea></textarea>
+            </div>
+            <div class="sheet-textbox-div">
+                <span>MELANCOLIA</span>
+                <input>
+                <textarea></textarea>
+            </div>
+            <div class="sheet-textbox-div">
+                <span>HERANÇAS</span>
+                <input>
+                <textarea></textarea>
+            </div>
+            <div class="sheet-textbox-div">
+                <span>ANTECEDENTE</span>
+                <input>
+                <textarea></textarea>
+            </div>
+            <div class="sheet-textbox-div">
+                <span>MALDIÇÃO</span>
+                <input>
+                <textarea></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="sheet-character-equipment">
+        <div class="sheet-equipment">
+            <fieldset class="repeating_equipment">                                    
+                <div class="sheet-container-single-spell">
+                    <button type="roll" name="roll_spell1" class="buttonspell" value=""></button>
+                    <select class="sheet-tipoacao" name="attr_tipoacao">
+                        <option value="acao">Ação</option>
+                        <option value="bonus">Bônus</option>
+                        <option value="livre">Livre</option>
+                        <option value="passiva">Passiva</option>
+                        <option value="reacao">Reação</option>
+                    </select>
+                    <input class="sheet-nomeacao" name="attr_nameaction" type="text" spellcheck="false" value=""/>
+                    <select class="sheet-custoacao" name="attr_custoacao">
+                        <option value="-" selected>-</option>
+                        <option value="rep">Rep</option>
+                        <option value="1pe">1 PE</option>
+                        <option value="2pe">2 PE</option>
+                        <option value="3pe">3 PE</option>
+                        <option value="4pe">4 PE</option>
+                        <option value="5pe">5 PE</option>
+                    </select>
+                    <input type="checkbox" class="sheet-hiddencheckbox">
+                    <span class="sheet-hiddencheckboxcover">y</span>
+                    
+                    <div class="sheet-extra">
+                        <span>Descritores:</span>
+                        <input name="attr_descritor" type="text" spellcheck="false" value=""/>
+                        <textarea class="fullline" name="attr_spelldescription"></textarea>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="sheet-money-others">
+            <div class="sheet-money">
+                <div>
+                    <span>T$</span><input>
+                </div>
+                <div>
+                    <span>P$</span><input>
+                </div>
+                <div>
+                    <span>K$</span><input>
+                </div>
+            </div>
+            <div class="sheet-number-slots">
+                <div>
+                    <div>
+                        <span>CURRENT</span>
+                    </div>
+                    <div>
+                        <span>MAXIMO</span>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <input>
+                    </div>
+                    <div>
+                        <input>
+                    </div>
+                </div>
+                <div>
+                    <span>INVENTORY SLOTS</span>
+                </div>
+            </div>
+            <div class="sheet-other-items">
+
+            </div>
+            <div class="sheet-magic-volumes">
+                
+            </div>
+        </div>
+    </div>
+    <div class="sheet-character-actions">
+        <div class="sheet-actions">
+            <fieldset class="repeating_actions">                                    
+                <div class="sheet-container-single-spell">
+                    <button type="roll" name="roll_spell1" class="buttonspell" value=""></button>
+                    <select class="sheet-tipoacao" name="attr_tipoacao">
+                        <option value="acao">Ação</option>
+                        <option value="bonus">Bônus</option>
+                        <option value="livre">Livre</option>
+                        <option value="passiva">Passiva</option>
+                        <option value="reacao">Reação</option>
+                    </select>
+                    <input class="sheet-nomeacao" name="attr_nameaction" type="text" spellcheck="false" value=""/>
+                    <select class="sheet-custoacao" name="attr_custoacao">
+                        <option value="-" selected>-</option>
+                        <option value="rep">Rep</option>
+                        <option value="1pe">1 PE</option>
+                        <option value="2pe">2 PE</option>
+                        <option value="3pe">3 PE</option>
+                        <option value="4pe">4 PE</option>
+                        <option value="5pe">5 PE</option>
+                    </select>
+                    <input type="checkbox" class="sheet-hiddencheckbox">
+                    <span class="sheet-hiddencheckboxcover">y</span>
+                    
+                    <div class="sheet-extra">
+                        <span>Descritores:</span>
+                        <input name="attr_descritor" type="text" spellcheck="false" value=""/>
+                        <textarea class="fullline" name="attr_spelldescription"></textarea>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <div class="sheet-character-spells">
+        <div class="sheet-spells">
+            <div class="sheet-spells-atributes">
+                <div>
+                    <span>ATRIBUTO CHAVE</span>
+                    <select class="sheet-camada" name="attr_camada">
+                        <option value="@{attr_character_strength}">Força</option>
+                        <option value="@{attr_character_dexterity}">Destreza</option>
+                        <option value="@{attr_character_constitution}">Constituição</option>
+                        <option value="@{attr_character_intelligence}">Inteligência</option>
+                        <option value="@{attr_character_wisdom}">Sabedoria</option>
+                        <option value="@{attr_character_charisma}">Carisma</option>
+                    </select>
+                </div>
+                <div>
+                    <span>BÔNUS DE ATAQUE</span>
+                    <input class="singleline" name="attr_bonusataquemagia" type="text" spellcheck="false" value=""/>
+                </div>
+            </div>
+            <div class="sheet-spells-container">
+                <fieldset class="repeating_spells">
+                    <div class="sheet-container-single-spell">
+                        <button type="roll" name="roll_spell4" class="buttonspell" value="&{template:spell}{{character=@{character_name}}}{{spellname=@{namespell}}}{{type=@{tiporitual}}}{{execution=@{spellexecucao}}}{{duration=@{spellduracao}}}{{range=@{spellalcance}}}{{targetarea=@{spellalvoarea}}}{{resistance=@{spellresistencia}}}{{description=@{spelldescription}}}{{cd=[[@{dt}+@{bonusdt}]]}} {{custoparanormal=[[30+?{Ritual|Base, 0|Discente, @{spelldiscentecusto}|Verdadeiro, @{spellverdadeiracusto}} ]]}} {{rolagemcusto=[[@{int}d20kh1+@{ocultismobonus}]]}} {{spelldiscentedescription=@{spelldiscentedescription} }} {{spellverdadeiradescription=@{spellverdadeiradescription}}}"></button>
+                        <select class="sheet-tipoacao" name="attr_tipoacao">
+                            <option value="acao">Ação</option>
+                            <option value="bonus">Bônus</option>
+                            <option value="livre">Livre</option>
+                            <option value="passiva" selected>Passiva</option>
+                            <option value="reacao">Reação</option>
+                        </select>
+                        <input class="sheet-spellname" name="attr_namespell" type="text" spellcheck="false" value=""/>
+                        <select class="sheet-custospell" name="attr_custospell">
+                            <option value=""></option>
+                            <option value="rep">Rep</option>
+                            <option value="1pe">1 PE</option>
+                            <option value="2pe">2 PE</option>
+                            <option value="3pe">3 PE</option>
+                            <option value="4pe">4 PE</option>
+                            <option value="5pe">5 PE</option>
+                        </select>
+                        <input type="checkbox" class="sheet-hiddencheckbox">
+                        <span class="sheet-hiddencheckboxcover">y</span>
+                        <div class="sheet-extra">
+                            <span>Camada</span>
+                            <select class="camada" name="attr_camada">
+                                <option value=""></option>
+                                <option value="truque">TRUQUE</option>
+                                <option value="superficial">SUPERFICIAL</option>
+                                <option value="rasa">RASA</option>
+                                <option value="profunda">PROFUNDA</option>
+                            </select>
+
+                            <span>Tipo</span>
+                            <select class="tipo" name="attr_tipo">
+                                <option value=""></option>
+                                <option value="ofensiva">OFENSIVA</option>
+                                <option value="utilitaria">UTILITÁRIA</option>
+                                <option value="controle">CONTROLE</option>
+                            </select>
+
+                            <span>Descritores</span>
+                            <input  class="singleline" name="attr_descritores" type="text" spellcheck="false" value=""/>  
+
+                            <span>Alcance</span>
+                            <input class="singleline" name="attr_spellalcance" type="text" spellcheck="false" value=""/>
+                            <span>Duração</span>
+                            <input class="singleline" name="attr_spellduracao" type="text" spellcheck="false" value=""/>
+                            
+                            <span class="fullline">Descrição</span>
+                            <textarea class="fullline" name="attr_spelldescription"></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/worker">
+    //Troca entre as abas
+    on("sheet:opened change:cstype", function(e){
+        getAttrs(["cstype"], function(v){
+            let switch_selector = 'sheet-switch-selected';
+            
+            if (v.cstype == 0) {
+                $20('.sheet-character-attributes-tab').addClass(switch_selector);
+                $20('.sheet-character-actions-tab').removeClass(switch_selector);
+                $20('.sheet-character-spells-tab').removeClass(switch_selector);
+                $20('.sheet-character-equipment-tab').removeClass(switch_selector);
+
+                $20('.sheet-character-attributes').removeClass('sheet-hiddenelement');                  
+                $20('.sheet-character-actions').addClass('sheet-hiddenelement');
+                $20('.sheet-character-spells').addClass('sheet-hiddenelement');
+                $20('.sheet-character-equipment').addClass('sheet-hiddenelement');            
+            }
+    
+            if (v.cstype == 1){
+                $20('.sheet-character-actions-tab').addClass(switch_selector);
+                $20('.sheet-character-attributes-tab').removeClass(switch_selector);
+                $20('.sheet-character-spells-tab').removeClass(switch_selector);
+                $20('.sheet-character-equipment-tab').removeClass(switch_selector);
+
+                $20('.sheet-character-actions').removeClass('sheet-hiddenelement');                  
+                $20('.sheet-character-attributes').addClass('sheet-hiddenelement');
+                $20('.sheet-character-spells').addClass('sheet-hiddenelement');    
+                $20('.sheet-character-equipment').addClass('sheet-hiddenelement');         
+            }               
+    
+            if (v.cstype == 2){
+                $20('.sheet-character-spells-tab').addClass(switch_selector);
+                $20('.sheet-character-actions-tab').removeClass(switch_selector);
+                $20('.sheet-character-attributes-tab').removeClass(switch_selector);
+                $20('.sheet-character-equipment-tab').removeClass(switch_selector);
+
+                $20('.sheet-character-spells').removeClass('sheet-hiddenelement');                  
+                $20('.sheet-character-actions').addClass('sheet-hiddenelement');
+                $20('.sheet-character-attributes').addClass('sheet-hiddenelement'); 
+                $20('.sheet-character-equipment').addClass('sheet-hiddenelement');               
+            }  
+
+            if (v.cstype == 3){
+                $20('.sheet-character-equipment-tab').addClass(switch_selector);
+                $20('.sheet-character-spells-tab').removeClass(switch_selector);
+                $20('.sheet-character-actions-tab').removeClass(switch_selector);
+                $20('.sheet-character-attributes-tab').removeClass(switch_selector);
+                
+                $20('.sheet-character-equipment').removeClass('sheet-hiddenelement');
+                $20('.sheet-character-spells').addClass('sheet-hiddenelement');                  
+                $20('.sheet-character-actions').addClass('sheet-hiddenelement');
+                $20('.sheet-character-attributes').addClass('sheet-hiddenelement');                                 
+            }     
+                            
+        });
+    });
+</script>
