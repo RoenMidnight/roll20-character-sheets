@@ -82,7 +82,7 @@
         </label>
         <label class="sheet-switch sheet-character-actions-tab">
             <input id="cstype" class="sheet-hiddenelement" type="radio" name="attr_cstype" value="1">
-            <span class="slider round">Ações</span>
+            <span class="slider round">Habilidades</span>
         </label>
         <label class="sheet-switch sheet-character-spells-tab">
             <input id="cstype" class="sheet-hiddenelement" type="radio" name="attr_cstype" value="2">
@@ -180,9 +180,10 @@
                                 <input type="checkbox" class="sheet-big-check" value="1" name="attr_apresentacao_proficiency">                                
                                 <input class="sheet-rolls-flag" type="checkbox" name="attr_apresentacao_checkbox"><span>APRESENTAÇÃO</span>
                                 <div class="sheet-rolls">
-                                    <button type="action" name="act_skillroll" value="apresentacao-simples">t</button>
-                                    <button type="action" name="act_skillroll" value="apresentacao-vantagem">tt</button>
-                                    <button type="action" name="act_skillroll" value="apresentacao-desvantagem">TT</button>
+                                    <button title="@{Simples}"      type="action" name="act_skillroll" value="apresentacao-simples">t</button>
+                                    <button title="@{Vantagem}"     type="action" name="act_skillroll" value="apresentacao-vantagem">tt</button>
+                                    <button title="@{Desvantagem}"  type="action" name="act_skillroll" value="apresentacao-desvantagem">TT</button>
+                                    <span>+</span>
                                     <input type="number" name="attr_mod_apresentacao" spellcheck="false" placeholder="0" value="0">
                                 </div>
                             </div>
@@ -207,9 +208,10 @@
                                     <option>Instrumentos Musicais</option>
                                 </select>
                                 <div class="sheet-rolls">
-                                    <button type="action" name="act_skillroll" value="aptidaoum-simples">t</button>
-                                    <button type="action" name="act_skillroll" value="aptidaoum-vantagem">tt</button>
-                                    <button type="action" name="act_skillroll" value="aptidaoum-desvantagem">TT</button>
+                                    <button title="@{Simples}"     type="action" name="act_skillroll" value="aptidaoum-simples">t</button>
+                                    <button title="@{Vantagem}"    type="action" name="act_skillroll" value="aptidaoum-vantagem">tt</button>
+                                    <button title="@{Desvantagem}" type="action" name="act_skillroll" value="aptidaoum-desvantagem">TT</button>
+                                    <span>+</span>
                                     <input type="number" name="attr_mod_aptidaoum" spellcheck="false" placeholder="0" value="0">
                                 </div>
                             </div>
@@ -233,9 +235,10 @@
                                     <option>Instrumentos Musicais</option>
                                 </select>
                                 <div class="sheet-rolls">
-                                    <button type="action" name="act_skillroll" value="aptidaodois-simples">t</button>
-                                    <button type="action" name="act_skillroll" value="aptidaodois-vantagem">tt</button>
-                                    <button type="action" name="act_skillroll" value="aptidaodois-desvantagem">TT</button>
+                                    <button title="@{Simples}"     type="action" name="act_skillroll" value="aptidaodois-simples">t</button>
+                                    <button title="@{Vantagem}"    type="action" name="act_skillroll" value="aptidaodois-vantagem">tt</button>
+                                    <button title="@{Desvantagem}" type="action" name="act_skillroll" value="aptidaodois-desvantagem">TT</button>
+                                    <span>+</span>
                                     <input type="number" name="attr_mod_aptidaodois" spellcheck="false" placeholder="0" value="0">
                                 </div>
                             </div>
@@ -259,9 +262,10 @@
                                     <option>Instrumentos Musicais</option>
                                 </select>
                                 <div class="sheet-rolls">
-                                    <button type="action" name="act_skillroll" value="aptidaotres-simples">t</button>
-                                    <button type="action" name="act_skillroll" value="aptidaotres-vantagem">tt</button>
-                                    <button type="action" name="act_skillroll" value="aptidaotres-desvantagem">TT</button>
+                                    <button title="@{Simples}"     type="action" name="act_skillroll" value="aptidaotres-simples">t</button>
+                                    <button title="@{Vantagem}"    type="action" name="act_skillroll" value="aptidaotres-vantagem">tt</button>
+                                    <button title="@{Desvantagem}" type="action" name="act_skillroll" value="aptidaotres-desvantagem">TT</button>
+                                    <span>+</span>
                                     <input type="number" name="attr_mod_aptidaotres" spellcheck="false" placeholder="0" value="0">
                                 </div>
                             </div>
@@ -271,9 +275,10 @@
                                 <input type="checkbox" class="sheet-big-check"  value="1" name="attr_arcanismo_proficiency">
                                 <input class="sheet-rolls-flag" type="checkbox" name="attr_arcanismo_checkbox"><span>ARCANISMO</span>
                                 <div class="sheet-rolls">
-                                    <button type="action" name="act_skillroll" value="arcanismo-simples">t</button>
-                                    <button type="action" name="act_skillroll" value="arcanismo-vantagem">tt</button>
-                                    <button type="action" name="act_skillroll" value="arcanismo-desvantagem">TT</button>
+                                    <button title="@{Simples}"     type="action" name="act_skillroll" value="arcanismo-simples">t</button>
+                                    <button title="@{Vantagem}"    type="action" name="act_skillroll" value="arcanismo-vantagem">tt</button>
+                                    <button title="@{Desvantagem}" type="action" name="act_skillroll" value="arcanismo-desvantagem">TT</button>
+                                    <span>+</span>
                                     <input type="number" name="attr_mod_arcanismo" spellcheck="false" placeholder="0" value="0">
                                 </div>
                             </div>
@@ -283,9 +288,10 @@
                                 <input type="checkbox" class="sheet-big-check" value="1" name="attr_cultura_proficiency">
                                 <input class="sheet-rolls-flag" type="checkbox" name="attr_cultura_checkbox"><span>CULTURA</span>
                                 <div class="sheet-rolls">
-                                    <button type="action" name="act_skillroll" value="cultura-simples">t</button>
-                                    <button type="action" name="act_skillroll" value="cultura-vantagem">tt</button>
-                                    <button type="action" name="act_skillroll" value="cultura-desvantagem">TT</button>
+                                    <button title="@{Simples}"     type="action" name="act_skillroll" value="cultura-simples">t</button>
+                                    <button title="@{Vantagem}"    type="action" name="act_skillroll" value="cultura-vantagem">tt</button>
+                                    <button title="@{Desvantagem}" type="action" name="act_skillroll" value="cultura-desvantagem">TT</button>
+                                    <span>+</span>
                                     <input type="number" name="attr_mod_cultura" spellcheck="false" placeholder="0" value="0">
                                 </div>
                             </div>
@@ -295,9 +301,10 @@
                                 <input type="checkbox" class="sheet-big-check" value="1" name="attr_doutrinas_proficiency">
                                 <input class="sheet-rolls-flag" type="checkbox" name="attr_doutrinas_checkbox"><span>DOUTRINAS</span>
                                 <div class="sheet-rolls">
-                                    <button type="action" name="act_skillroll" value="doutrinas-simples">t</button>
-                                    <button type="action" name="act_skillroll" value="doutrinas-vantagem">tt</button>
-                                    <button type="action" name="act_skillroll" value="doutrinas-desvantagem">TT</button>
+                                    <button title="@{Simples}"     type="action" name="act_skillroll" value="doutrinas-simples">t</button>
+                                    <button title="@{Vantagem}"    type="action" name="act_skillroll" value="doutrinas-vantagem">tt</button>
+                                    <button title="@{Desvantagem}" type="action" name="act_skillroll" value="doutrinas-desvantagem">TT</button>
+                                    <span>+</span>
                                     <input type="number" name="attr_mod_doutrinas" spellcheck="false" placeholder="0" value="0">
                                 </div>
                             </div>
@@ -307,9 +314,10 @@
                                 <input type="checkbox" class="sheet-big-check" value="1" name="attr_diplomacia_proficiency">
                                 <input class="sheet-rolls-flag" type="checkbox" name="attr_diplomacia_checkbox"><span>DIPLOMACIA</span>
                                 <div class="sheet-rolls">
-                                    <button type="action" name="act_skillroll" value="diplomacia-simples">t</button>
-                                    <button type="action" name="act_skillroll" value="diplomacia-vantagem">tt</button>
-                                    <button type="action" name="act_skillroll" value="diplomacia-desvantagem">TT</button>
+                                    <button title="@{Simples}"     type="action" name="act_skillroll" value="diplomacia-simples">t</button>
+                                    <button title="@{Vantagem}"    type="action" name="act_skillroll" value="diplomacia-vantagem">tt</button>
+                                    <button title="@{Desvantagem}" type="action" name="act_skillroll" value="diplomacia-desvantagem">TT</button>
+                                    <span>+</span>
                                     <input type="number" name="attr_mod_diplomacia" spellcheck="false" placeholder="0" value="0">
                                 </div>
                             </div>
@@ -319,9 +327,10 @@
                                 <input type="checkbox" class="sheet-big-check" value="1" name="attr_furtividade_proficiency">
                                 <input class="sheet-rolls-flag" type="checkbox" name="attr_furtividade_checkbox"><span>FURTIVIDADE</span>
                                 <div class="sheet-rolls">
-                                    <button type="action" name="act_skillroll" value="furtividade-simples">t</button>
-                                    <button type="action" name="act_skillroll" value="furtividade-vantagem">tt</button>
-                                    <button type="action" name="act_skillroll" value="furtividade-desvantagem">TT</button>
+                                    <button title="@{Simples}"     type="action" name="act_skillroll" value="furtividade-simples">t</button>
+                                    <button title="@{Vantagem}"    type="action" name="act_skillroll" value="furtividade-vantagem">tt</button>
+                                    <button title="@{Desvantagem}" type="action" name="act_skillroll" value="furtividade-desvantagem">TT</button>
+                                    <span>+</span>
                                     <input type="number" name="attr_mod_furtividade" spellcheck="false" placeholder="0" value="0">
                                 </div>
                             </div>
@@ -331,9 +340,10 @@
                                 <input type="checkbox" class="sheet-big-check" value="1" name="attr_intimidacao_proficiency">
                                 <input class="sheet-rolls-flag" type="checkbox" name="attr_intimidacao_checkbox"><span>INTIMIDAÇÃO</span>
                                 <div class="sheet-rolls">
-                                    <button type="action" name="act_skillroll" value="intimidacao-simples">t</button>
-                                    <button type="action" name="act_skillroll" value="intimidacao-vantagem">tt</button>
-                                    <button type="action" name="act_skillroll" value="intimidacao-desvantagem">TT</button>
+                                    <button title="@{Simples}"     type="action" name="act_skillroll" value="intimidacao-simples">t</button>
+                                    <button title="@{Vantagem}"    type="action" name="act_skillroll" value="intimidacao-vantagem">tt</button>
+                                    <button title="@{Desvantagem}" type="action" name="act_skillroll" value="intimidacao-desvantagem">TT</button>
+                                    <span>+</span>
                                     <input type="number" name="attr_mod_intimidacao" spellcheck="false" placeholder="0" value="0">
                                 </div>
                             </div>
@@ -343,9 +353,10 @@
                                 <input type="checkbox" class="sheet-big-check" value="1" name="attr_intuicao_proficiency">
                                 <input class="sheet-rolls-flag" type="checkbox" name="attr_intuicao_checkbox"><span>INTUIÇÃO</span>
                                 <div class="sheet-rolls">
-                                    <button type="action" name="act_skillroll" value="intuicao-simples">t</button>
-                                    <button type="action" name="act_skillroll" value="intuicao-vantagem">tt</button>
-                                    <button type="action" name="act_skillroll" value="intuicao-desvantagem">TT</button>
+                                    <button title="@{Simples}"     type="action" name="act_skillroll" value="intuicao-simples">t</button>
+                                    <button title="@{Vantagem}"    type="action" name="act_skillroll" value="intuicao-vantagem">tt</button>
+                                    <button title="@{Desvantagem}" type="action" name="act_skillroll" value="intuicao-desvantagem">TT</button>
+                                    <span>+</span>
                                     <input type="number" name="attr_mod_intuicao" spellcheck="false" placeholder="0" value="0">
                                 </div>
                             </div>
@@ -355,9 +366,10 @@
                                 <input type="checkbox" class="sheet-big-check" value="1" name="attr_medicina_proficiency">
                                 <input class="sheet-rolls-flag" type="checkbox" name="attr_medicina_checkbox"><span>MEDICINA</span>
                                 <div class="sheet-rolls">
-                                    <button type="action" name="act_skillroll" value="medicina-simples">t</button>
-                                    <button type="action" name="act_skillroll" value="medicina-vantagem">tt</button>
-                                    <button type="action" name="act_skillroll" value="medicina-desvantagem">TT</button>
+                                    <button title="@{Simples}"     type="action" name="act_skillroll" value="medicina-simples">t</button>
+                                    <button title="@{Vantagem}"    type="action" name="act_skillroll" value="medicina-vantagem">tt</button>
+                                    <button title="@{Desvantagem}" type="action" name="act_skillroll" value="medicina-desvantagem">TT</button>
+                                    <span>+</span>
                                     <input type="number" name="attr_mod_medicina" spellcheck="false" placeholder="0" value="0">
                                 </div>
                             </div>
@@ -367,9 +379,10 @@
                                 <input type="checkbox" class="sheet-big-check" value="1" name="attr_magitec_proficiency">
                                 <input class="sheet-rolls-flag" type="checkbox" name="attr_magitec_checkbox"><span>MAGITEC</span>
                                 <div class="sheet-rolls">
-                                    <button type="action" name="act_skillroll" value="magitec-simples">t</button>
-                                    <button type="action" name="act_skillroll" value="magitec-vantagem">tt</button>
-                                    <button type="action" name="act_skillroll" value="magitec-desvantagem">TT</button>
+                                    <button title="@{Simples}"     type="action" name="act_skillroll" value="magitec-simples">t</button>
+                                    <button title="@{Vantagem}"    type="action" name="act_skillroll" value="magitec-vantagem">tt</button>
+                                    <button title="@{Desvantagem}" type="action" name="act_skillroll" value="magitec-desvantagem">TT</button>
+                                    <span>+</span>
                                     <input type="number" name="attr_mod_magitec" spellcheck="false" placeholder="0" value="0">
                                 </div>
                             </div>
@@ -379,9 +392,10 @@
                                 <input type="checkbox" class="sheet-big-check" value="1" name="attr_malandragem_proficiency">
                                 <input class="sheet-rolls-flag" type="checkbox" name="attr_malandragem_checkbox"><span>MALANDRAGEM</span>
                                 <div class="sheet-rolls">
-                                    <button type="action" name="act_skillroll" value="malandragem-simples">t</button>
-                                    <button type="action" name="act_skillroll" value="malandragem-vantagem">tt</button>
-                                    <button type="action" name="act_skillroll" value="malandragem-desvantagem">TT</button>
+                                    <button title="@{Simples}"      type="action" name="act_skillroll" value="malandragem-simples">t</button>
+                                    <button title="@{Vantagem}"     type="action" name="act_skillroll" value="malandragem-vantagem">tt</button>
+                                    <button title="@{Desvantagem}"  type="action" name="act_skillroll" value="malandragem-desvantagem">TT</button>
+                                    <span>+</span>
                                     <input type="number" name="attr_mod_malandragem" spellcheck="false" placeholder="0" value="0">
                                 </div>
                             </div>
@@ -391,9 +405,10 @@
                                 <input type="checkbox" class="sheet-big-check" value="1" name="attr_manipulacao_proficiency">
                                 <input class="sheet-rolls-flag" type="checkbox" name="attr_manipulacao_checkbox"><span>MANIPULAÇÃO</span>
                                 <div class="sheet-rolls">
-                                    <button type="action" name="act_skillroll" value="manipulacao-simples">t</button>
-                                    <button type="action" name="act_skillroll" value="manipulacao-vantagem">tt</button>
-                                    <button type="action" name="act_skillroll" value="manipulacao-desvantagem">TT</button>
+                                    <button title="@{Simples}"     type="action" name="act_skillroll" value="manipulacao-simples">t</button>
+                                    <button title="@{Vantagem}"    type="action" name="act_skillroll" value="manipulacao-vantagem">tt</button>
+                                    <button title="@{Desvantagem}" type="action" name="act_skillroll" value="manipulacao-desvantagem">TT</button>
+                                    <span>+</span>
                                     <input type="number" name="attr_mod_manipulacao" spellcheck="false" placeholder="0" value="0">
                                 </div>
                             </div>
@@ -403,9 +418,10 @@
                                 <input type="checkbox" class="sheet-big-check" value="1" name="attr_natureza_proficiency">
                                 <input class="sheet-rolls-flag" type="checkbox" name="attr_natureza_checkbox"><span>NATUREZA</span>
                                 <div class="sheet-rolls">
-                                    <button type="action" name="act_skillroll" value="natureza-simples">t</button>
-                                    <button type="action" name="act_skillroll" value="natureza-vantagem">tt</button>
-                                    <button type="action" name="act_skillroll" value="natureza-desvantagem">TT</button>
+                                    <button title="@{Simples}"     type="action" name="act_skillroll" value="natureza-simples">t</button>
+                                    <button title="@{Vantagem}"    type="action" name="act_skillroll" value="natureza-vantagem">tt</button>
+                                    <button title="@{Desvantagem}" type="action" name="act_skillroll" value="natureza-desvantagem">TT</button>
+                                    <span>+</span>
                                     <input type="number" name="attr_mod_natureza" spellcheck="false" placeholder="0" value="0">
                                 </div>
                             </div>
@@ -415,9 +431,10 @@
                                 <input type="checkbox" class="sheet-big-check" value="1" name="attr_percepcao_proficiency">
                                 <input class="sheet-rolls-flag" type="checkbox" name="attr_percepcao_checkbox"><span>PERCEPÇÃO</span>
                                 <div class="sheet-rolls">
-                                    <button type="action" name="act_skillroll" value="percepcao-simples">t</button>
-                                    <button type="action" name="act_skillroll" value="percepcao-vantagem">tt</button>
-                                    <button type="action" name="act_skillroll" value="percepcao-desvantagem">TT</button>
+                                    <button title="@{Simples}"     type="action" name="act_skillroll" value="percepcao-simples">t</button>
+                                    <button title="@{Vantagem}"    type="action" name="act_skillroll" value="percepcao-vantagem">tt</button>
+                                    <button title="@{Desvantagem}" type="action" name="act_skillroll" value="percepcao-desvantagem">TT</button>
+                                    <span>+</span>
                                     <input type="number" name="attr_mod_percepcao" spellcheck="false" placeholder="0" value="0">
                                 </div>
                             </div>
@@ -427,9 +444,10 @@
                                 <input type="checkbox" class="sheet-big-check" value="1" name="attr_preparofisico_proficiency">
                                 <input class="sheet-rolls-flag" type="checkbox" name="attr_preparofisico_checkbox"><span>PREPARO FÍSICO</span>
                                 <div class="sheet-rolls">
-                                    <button type="action" name="act_skillroll" value="preparofisico-simples">t</button>
-                                    <button type="action" name="act_skillroll" value="preparofisico-vantagem">tt</button>
-                                    <button type="action" name="act_skillroll" value="preparofisico-desvantagem">TT</button>
+                                    <button title="@{Simples}"     type="action" name="act_skillroll" value="preparofisico-simples">t</button>
+                                    <button title="@{Vantagem}"    type="action" name="act_skillroll" value="preparofisico-vantagem">tt</button>
+                                    <button title="@{Desvantagem}" type="action" name="act_skillroll" value="preparofisico-desvantagem">TT</button>
+                                    <span>+</span>
                                     <input type="number" name="attr_mod_preparofisico" spellcheck="false" placeholder="0" value="0">
                                 </div>
                             </div>
@@ -769,7 +787,7 @@
         <div class="sheet-actions">
             <fieldset class="repeating_actions">                                    
                 <div class="sheet-container-single-spell">
-                    <button type="roll" name="roll_spell1" class="buttonspell" value="&{template:actspell} {{character_name=@{character_name}}} {{tipoacao=@{tipoacao}}} {{nameaction=@{nameaction}}} {{custoacao=@{custoacao}}} {{info_actions=@{info_actions}}} {{descritores_actions=@{descritores_actions}}} {{alcance_actions=@{alcance_actions}}} {{alvo_actions=@{alvo_actions}}} {{duracao_actions=@{duracao_actions}}} {{component_actions=@{component_actions}}} {{gatilho_actions=@{gatilho_actions}}} {{ataque_actions=@{ataque_actions}}} {{acerto_actions=@{acerto_actions}}} {{erro_actions=@{erro_actions}}} {{efeito_actions=@{efeito_actions}}} {{customod_actions=@{customod_actions}}} {{tipomod_actions=@{tipomod_actions}}} {{description_actions=@{description_actions}}} {{modificacoes=@{customod_actions}@{tipomod_actions}@{description_actions}}}"></button>
+                    <button type="roll" name="roll_spell1" class="buttonspell" value="&{template:actspell} {{character_name=@{character_name}}} {{tipoacao=@{tipoacao}}} {{nameaction=@{nameaction}}} {{custoacao=@{custoacao}}} {{info_actions=@{info_actions}}} {{descritores_actions=@{descritores_actions}}} {{alcance_actions=@{alcance_actions}}} {{alvo_actions=@{alvo_actions}}} {{duracao_actions=@{duracao_actions}}} {{component_actions=@{component_actions}}} {{gatilho_actions=@{gatilho_actions}}} {{ataque_actions=@{ataque_actions}}} {{acerto_actions=@{acerto_actions}}} {{erro_actions=@{erro_actions}}} {{efeito_actions=@{efeito_actions}}} {{especial_actions=@{especial_actions}}} {{customod_actions=@{customod_actions}}} {{tipomod_actions=@{tipomod_actions}}} {{description_actions=@{description_actions}}} {{modificacoes=@{customod_actions}@{tipomod_actions}@{description_actions}}}"></button>
                     <select class="sheet-tipoacao" name="attr_tipoacao">
                         <option value="acao">Ação</option>
                         <option value="bonus">Bônus</option>
@@ -812,6 +830,7 @@
                         <div class="sheet-odd"><span>Acerto:</span> <input name="attr_acerto_actions" type="text" spellcheck="false" value=""></div>
                         <div class="sheet-even"><span>Erro:</span> <input name="attr_erro_actions" type="text" spellcheck="false" value=""></div>
                         <div class="sheet-odd"><span>Efeito:</span> <input name="attr_efeito_actions" type="text" spellcheck="false" value=""></div>
+                        <div class="sheet-odd"><span>Especial:</span> <input name="attr_especial_actions" type="text" spellcheck="false" value=""></div>
                         <div class="sheet-even">
                             <span>Modificações:</span><br>
                             <span>Custo da Modificação</span> <input name="attr_customod_actions" type="text" spellcheck="false" value="">
@@ -846,7 +865,7 @@
             <div class="sheet-spells-container">
                 <fieldset class="repeating_spells">
                     <div class="sheet-container-single-spell">
-                        <button type="roll" name="roll_spell1" class="buttonspell" value="&{template:actspell} {{character_name=@{character_name}}} {{tipoacao=@{tipospells}}} {{nameaction=@{namespells}}} {{custoacao=@{custospells}}} {{info_actions=@{info_spells}}} {{descritores_actions=@{descritores_actions}}} {{alcance_actions=@{alcance_spells}}} {{alvo_actions=@{alvo_spells}}} {{duracao_actions=@{duracao_spells}}} {{component_actions=@{component_spells}}} {{gatilho_actions=@{gatilho_spells}}} {{ataque_actions=@{ataque_spells}}} {{acerto_actions=@{acerto_spells}}} {{erro_actions=@{erro_spells}}} {{efeito_actions=@{efeito_spells}}} {{customod_actions=@{customod_actions}}} {{tipomod_actions=@{tipomod_actions}}} {{description_actions=@{description_actions}}} {{modificacoes=@{customod_actions}@{tipomod_actions}@{description_actions}}}"></button>
+                        <button type="roll" name="roll_spell1" class="buttonspell" value="&{template:actspell} {{character_name=@{character_name}}} {{tipoacao=@{tipospells}}} {{nameaction=@{namespells}}} {{custoacao=@{custospells}}} {{info_actions=@{info_spells}}} {{descritores_actions=@{descritores_actions}}} {{alcance_actions=@{alcance_spells}}} {{alvo_actions=@{alvo_spells}}} {{duracao_actions=@{duracao_spells}}} {{component_actions=@{component_spells}}} {{gatilho_actions=@{gatilho_spells}}} {{ataque_actions=@{ataque_spells}}} {{acerto_actions=@{acerto_spells}}} {{erro_actions=@{erro_spells}}} {{efeito_actions=@{efeito_spells}}} {{especial_actions=@{especial_actions}}}  {{customod_actions=@{customod_actions}}} {{tipomod_actions=@{tipomod_actions}}} {{description_actions=@{description_actions}}} {{modificacoes=@{customod_actions}@{tipomod_actions}@{description_actions}}}"></button>
                         <select class="sheet-tipoacao" name="attr_tipospells">
                             <option value="acao">Ação</option>
                             <option value="bonus">Bônus</option>
@@ -889,6 +908,7 @@
                             <div class="sheet-odd"><span>Acerto:</span> <input name="attr_acerto_spells" type="text" spellcheck="false" value=""></div>
                             <div class="sheet-even"><span>Erro:</span> <input name="attr_erro_spells" type="text" spellcheck="false" value=""></div>
                             <div class="sheet-odd"><span>Efeito:</span> <input name="attr_efeito_spells" type="text" spellcheck="false" value=""></div>
+                            <div class="sheet-odd"><span>Especial:</span> <input name="attr_especial_actions" type="text" spellcheck="false" value=""></div>
                             <div class="sheet-even">
                                 <span>Modificações:</span><br>
                                 <span>Custo da Modificação</span> <input name="attr_customod_actions" type="text" spellcheck="false" value="">
@@ -905,6 +925,7 @@
 
 <input type="hidden" name="attr_selectedattribute" value="" readonly="1">
 <input type="hidden" name="attr_selectedrawvalue" value="" readonly="1">
+<input type="hidden" name="attr_rawattribute" value="" readonly="1">
 
 <script type="text/worker">
     let calc_proficiency = function() {
@@ -965,9 +986,13 @@
             
                 setAttrs({[`selectedattribute`]: `character_${attribute}` });
                 setAttrs({[`selectedrawvalue`]: v[`character_${attribute}`] });
+                setAttrs({[`rawattribute`]: attribute});
             } else {
                 //let formated_attribute = `character_${attribute}`;
-                startRoll(`&{template:default} {{character=${v.character_name}}} {{roll=[[1d20+${v["selectedrawvalue"]}]]}}`, diceroll => {
+                const atribute_name = {
+                    "strength": "Força", "dexterity": "Destreza", "constitution": "Constituição", "intelligence": "Inteligência", "wisdom": "Sabedoria", "charisma": "Carisma"
+                }
+                startRoll(`&{template:skillroll} {{character=${v.character_name}}} {{pericia=${atribute_name[attribute]}}} {{rolagem=[[1d20+${v["selectedrawvalue"]}]]}}`, diceroll => {
                 });                
 
                 $20(`.sheet-attr-span-${attribute}`).removeClass("sheet-active-element");
@@ -975,6 +1000,7 @@
                
                 setAttrs({[`selectedattribute`]: "" });
                 setAttrs({[`selectedrawvalue`]: "" });
+                setAttrs({[`rawattribute`]: ""});
             }
         }); 
     }
@@ -991,15 +1017,19 @@
             "percepcao": "Percepção", "preparofisico": "Preparo Físico"
         }
 
-        getAttrs(["selectedattribute","selectedrawvalue", `${arr_skill[0]}_checkbox`,  `${arr_skill[0]}_proficiency`, "proficient_bonus", `${arr_skill[0]}_especialization`, `mod_${arr_skill[0]}`], function(v){
+        const atribute_name = {
+            "strength": "Força", "dexterity": "Destreza", "constitution": "Constituição", "intelligence": "Inteligência", "wisdom": "Sabedoria", "charisma": "Carisma"
+        }
+
+        getAttrs(["selectedattribute","selectedrawvalue", "rawattribute", `${arr_skill[0]}_checkbox`,  `${arr_skill[0]}_proficiency`, "proficient_bonus", `${arr_skill[0]}_especialization`, `mod_${arr_skill[0]}`], function(v){
             if(arr_skill[1] == "simples"){
-                startRoll(`&{template:default}{{character=@{character_name}}}{{pericia=${skills_name[arr_skill[0]]}}}{{rolagem=[[1d20+@{selectedrawvalue}+(@{${arr_skill[0]}_proficiency} * @{proficient_bonus} * (1 + @{${arr_skill[0]}_especialization})) + @{mod_${arr_skill[0]}}]]}}`, diceroll => {});
+                startRoll(`&{template:skillroll}{{character=@{character_name}}}{{pericia=${skills_name[arr_skill[0]]}(${atribute_name[v.rawattribute]})}}{{rolagem=[[1d20+@{selectedrawvalue}+(@{${arr_skill[0]}_proficiency} * @{proficient_bonus} * (1 + @{${arr_skill[0]}_especialization})) + @{mod_${arr_skill[0]}}]]}}`, diceroll => {});
             }
             if(arr_skill[1] == "vantagem"){
-                startRoll(`&{template:default}{{character=@{character_name}}}{{pericia=${skills_name[arr_skill[0]]}}}{{rolagem=[[2d20kh1+@{selectedrawvalue}+(@{${arr_skill[0]}_proficiency} * @{proficient_bonus} * (1 + @{${arr_skill[0]}_especialization})) + @{mod_${arr_skill[0]}}]]}}`, diceroll => {});
+                startRoll(`&{template:skillroll}{{character=@{character_name}}}{{pericia=${skills_name[arr_skill[0]]}(${atribute_name[v.rawattribute]})}}{{rolagem=[[2d20kh1+@{selectedrawvalue}+(@{${arr_skill[0]}_proficiency} * @{proficient_bonus} * (1 + @{${arr_skill[0]}_especialization})) + @{mod_${arr_skill[0]}}]]}}`, diceroll => {});
             }
             if(arr_skill[1] == "desvantagem"){
-                startRoll(`&{template:default}{{character=@{character_name}}}{{pericia=${skills_name[arr_skill[0]]}}}{{rolagem=[[2d20kl1+@{selectedrawvalue}+(@{${arr_skill[0]}_proficiency} * @{proficient_bonus} * (1 + @{${arr_skill[0]}_especialization})) + @{mod_${arr_skill[0]}}]]}}`, diceroll => {});
+                startRoll(`&{template:skillroll}{{character=@{character_name}}}{{pericia=${skills_name[arr_skill[0]]}(${atribute_name[v.rawattribute]})}}{{rolagem=[[2d20kl1+@{selectedrawvalue}+(@{${arr_skill[0]}_proficiency} * @{proficient_bonus} * (1 + @{${arr_skill[0]}_especialization})) + @{mod_${arr_skill[0]}}]]}}`, diceroll => {});
             }
 
             ['strength', 'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma'].forEach(stat => {
@@ -1467,6 +1497,11 @@
                 <span class="sheet-span-info">Efeito:</span><span>{{efeito_actions}}</span>
             </div>
         {{/efeito_actions}}
+        {{#especial_actions}}
+            <div class="sheet-actionspell-black">
+                <span class="sheet-span-info">Especial:</span><span>{{especial_actions}}</span>
+            </div>
+        {{/especial_actions}}
         {{#modificacoes}}
         <div class="sheet-actionspell-white">
             <span class="sheet-span-info-header">Modificações:</span><br>
@@ -1578,4 +1613,18 @@
             
         </div>
     {{/damage}}
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-skillroll">
+    <div class="container-actspell">
+        <div class="charname">
+            <span>{{character}}</span>
+        </div>
+        <div class="sheet-actionspell-header">
+            <span>{{{pericia}}}</span>
+        </div>
+        <div class="sheet-actionspell-info">
+            <span class="sheet-span-info">Rolagem</span><span>{{rolagem}}</span>
+        </div>
+    </div>
 </rolltemplate>
