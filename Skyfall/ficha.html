@@ -546,7 +546,7 @@
                                             <option value="@{character_intelligence}">INT</option>
                                             <option value="@{character_wisdom}">SAB</option>
                                             <option value="@{character_charisma}">CAR</option>
-                                            <option value="spell">MAGIA</option>
+                                            <option value="@{spellcasting_attribute}">MAGIA</option>
                                             <option value="0">-</option>
                                         </select><span>+</span>
                                         <input class="num" type="text" name="attr_atkmod" placeholder="0"><span>+</span>
@@ -568,7 +568,7 @@
                                             <option value="@{character_intelligence}">INT</option>
                                             <option value="@{character_wisdom}">SAB</option>
                                             <option value="@{character_charisma}">CAR</option>
-                                            <option value="spell">MAGIA</option>
+                                            <option value="@{spellcasting_attribute}">MAGIA</option>
                                             <option value="0">-</option>
                                         </select><span>+</span>
                                         <input class="num" type="text" name="attr_dmgmod" placeholder="0">
@@ -588,7 +588,7 @@
                                             <option value="@{character_intelligence}">INT</option>
                                             <option value="@{character_wisdom">SAB</option>
                                             <option value="@{character_charisma}">CAR</option>
-                                            <option value="spell">MAGIA</option>
+                                            <option value="@{spellcasting_attribute}">MAGIA</option>
                                             <option value="0">-</option>
                                         </select><span>+</span>
                                         <input class="num" type="text" name="attr_dmg2mod" placeholder="0">
@@ -848,13 +848,13 @@
             <div class="sheet-spells-atributes">
                 <div>
                     <span>ATRIBUTO CHAVE</span>
-                    <select class="sheet-camada" name="attr_speelcasting_attribute">
-                        <option value="@{attr_character_strength}">Força</option>
-                        <option value="@{attr_character_dexterity}">Destreza</option>
-                        <option value="@{attr_character_constitution}">Constituição</option>
-                        <option value="@{attr_character_intelligence}">Inteligência</option>
-                        <option value="@{attr_character_wisdom}">Sabedoria</option>
-                        <option value="@{attr_character_charisma}">Carisma</option>
+                    <select class="sheet-camada" name="attr_spellcasting_attribute">
+                        <option value="@{character_strength}">Força</option>
+                        <option value="@{character_dexterity}">Destreza</option>
+                        <option value="@{character_constitution}">Constituição</option>
+                        <option value="@{character_intelligence}">Inteligência</option>
+                        <option value="@{character_wisdom}">Sabedoria</option>
+                        <option value="@{character_charisma}">Carisma</option>
                     </select>
                 </div>
                 <div>
@@ -1205,7 +1205,7 @@
     };
 
     const do_update_attack = (attack_array, source) => {
-        let attack_attribs = ["character_level","proficient_bonus", "globalmagicmod","character_strength","character_dexterity","character_constitution","character_intelligence","character_wisdom","character_charisma","speelcasting_attribute","bonusataquemagia", "global_damage_mod_roll", "global_damage_mod_crit", "character_name"];
+        let attack_attribs = ["character_level","proficient_bonus", "globalmagicmod","character_strength","character_dexterity","character_constitution","character_intelligence","character_wisdom","character_charisma","spellcasting_attribute","bonusataquemagia", "global_damage_mod_roll", "global_damage_mod_crit", "character_name"];
         _.each(attack_array, (attackid) => {
             ["atkflag","atkname","atkattr_base","atkmod","atkprofflag","atkmagic","dmgflag","dmgbase","dmgattr","dmgmod","dmgtype","dmg2flag","dmg2base","dmg2attr","dmg2mod","dmg2type","dmgcustcrit","dmg2custcrit","saveflag","savedc","saveeffect","saveflat","hldmg","spellid","spelllevel","atkrange","itemid","ammo",].forEach((attr) => {
                 attack_attribs.push(`repeating_attacks_${attackid}_${attr}`)
@@ -1238,19 +1238,21 @@
                 if (!v[`${repeating_attacks}_atkattr_base`] || v[`${repeating_attacks}_atkattr_base`] === "0") {
                     atkattr_base = 0
                 } else if (v[`${repeating_attacks}_atkattr_base`] && v[`${repeating_attacks}_atkattr_base`] === "spell") {
-                    atkattr_base  = parseInt(v[v["speelcasting_attribute"].substring(2, v["speelcasting_attribute"].length - 2)], 10);
-                    atkattr_abrev = v["speelcasting_attribute"].substring(2, 5).toUpperCase();
+                    atkattr_base  = parseInt(v[v["spellcasting_attribute"].substring(2, v["spellcasting_attribute"].length - 2)], 10);
+                    atkattr_abrev = v["spellcasting_attribute"].substring(2, 5).toUpperCase();
                 } else {
                     atkattr_base = parseInt(v[v[`${repeating_attacks}_atkattr_base`].substring(2, v[`${repeating_attacks}_atkattr_base`].length - 1)], 10);
                     atkattr_abrev = v[`${repeating_attacks}_atkattr_base`].substring(2, 5).toUpperCase();
                 };
+
+                console.log("AtkBase", atkattr_base);
     
                 //DAMAGE 1 ability select inside settings for the repeating attack
                 if (!v[`${repeating_attacks}_dmgattr`] || v[`${repeating_attacks}_dmgattr`] === "0") {
                     dmgattr = 0;
                 } else if (v[`${repeating_attacks}_dmgattr`] && v[`${repeating_attacks}_dmgattr`] === "spell") {
-                    dmgattr = parseInt(v[v["speelcasting_attribute"].substring(2, v["speelcasting_attribute"].length - 2)], 10);
-                    dmgattr_abrev = v["speelcasting_attribute"].substring(2, 5).toUpperCase();
+                    dmgattr = parseInt(v[v["spellcasting_attribute"].substring(2, v["spellcasting_attribute"].length - 2)], 10);
+                    dmgattr_abrev = v["spellcasting_attribute"].substring(2, 5).toUpperCase();
                 } else {
                     dmgattr = parseInt(v[v[`${repeating_attacks}_dmgattr`].substring(2, v[`${repeating_attacks}_dmgattr`].length - 1)], 10);
                     dmgattr_abrev = v[`${repeating_attacks}_dmgattr`].substring(2, 5).toUpperCase();
@@ -1260,8 +1262,8 @@
                 if (!v[`${repeating_attacks}_dmg2attr`] || v[`${repeating_attacks}_dmg2attr`] === "0") {
                     dmg2attr = 0;
                 } else if (v[`${repeating_attacks}_dmg2attr`] && v[`${repeating_attacks}_dmg2attr`] === "spell") {
-                    dmg2attr = parseInt(v[v["speelcasting_attribute"].substring(2, v["speelcasting_attribute"].length - 2)], 10);
-                    dmg2attr_abrev = v["speelcasting_attribute"].substring(2, 5).toUpperCase();
+                    dmg2attr = parseInt(v[v["spellcasting_attribute"].substring(2, v["spellcasting_attribute"].length - 2)], 10);
+                    dmg2attr_abrev = v["spellcasting_attribute"].substring(2, 5).toUpperCase();
                 } else {
                     dmg2attr = parseInt(v[v[`${repeating_attacks}_dmg2attr`].substring(2, v[`${repeating_attacks}_dmg2attr`].length - 1)], 10);
                     dmg2attr_abrev =v[`${repeating_attacks}_dmg2attr`].substring(2, 5).toUpperCase();
